@@ -1,8 +1,5 @@
 package edu.alvernia.cs220;
 
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
-
 /**
  * Numeral
  * Contains the numeral, and the Numeral System which it is representing.
@@ -36,7 +33,7 @@ public class Numeral {
         if (targetNumeralSystem == NumeralSystem.Decimal) {
             // The Numeral target is Decimal, which has already been converted to.
             // No further conversion is needed.
-            return new Numeral(roundAsDecimal(decimal), targetNumeralSystem);
+            return new Numeral(Long.toString(decimal), targetNumeralSystem);
         }
         // The core algorithm for encoding a number from Decimal, to the target
         // system.
@@ -94,12 +91,16 @@ public class Numeral {
      * @param value
      * @return
      */
+    /* During class I used a 'double' datatype to represent a longer string.
+    This led to various issues with rounding. I could have made life easier
+    and just used a long to represent a longer rational number.
+
     static private String roundAsDecimal(double value) {
         DecimalFormat df = new DecimalFormat("#");
         df.setRoundingMode(RoundingMode.FLOOR);
         String formattedDouble = df.format(value);
         return formattedDouble;
-    }
+    }*/
 
     /**
      * Overrides the toString method to print information on

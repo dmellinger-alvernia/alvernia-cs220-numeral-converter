@@ -8,7 +8,7 @@ public enum NumeralSystem {
     Binary(2, "Binary", "01"),
     Decimal(10, "Decimal", "0123456789"),
     Hexadecimal(16, "Hexadecimal", "0123456789ABCDEF"),
-    Base64(16, "Hexadecimal", "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-");
+    Base64(64, "Base64", "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-");
 
     private final int base;
     private final String name;
